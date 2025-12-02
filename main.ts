@@ -1,7 +1,10 @@
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile3`, function (sprite, location) {
-    game.over(true)
+    game.showLongText("GOOD JOB!!", DialogLayout.Bottom)
+    tiles.setTilemap(tilemap`level1`)
+    tiles.placeOnRandomTile(JAckson, assets.tile`myTile2`)
 })
-let JAckson = sprites.create(img`
+let JAckson: Sprite = null
+JAckson = sprites.create(img`
     . . . . . . f f f f f . . . . . 
     . . . . . . f f f f f . . . . . 
     . . . . . f f f f f f f . . . . 
